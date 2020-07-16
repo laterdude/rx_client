@@ -1,0 +1,94 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 125%;
+}
+
+main {
+  flex: 1 1 100%;
+  display: flex;
+}
+
+.olmap {
+  flex: 1;
+}
+
+#demo-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  width: 20rem;
+  border-radius: 6px;
+  border: solid 8px #eee;
+  background-color: #fff;
+}
+
+#demo-controls h1 {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  font-weight: 100;
+  color: #555;
+}
+
+#demo-controls .demo-components {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+.demo-components label {
+  padding: 0.5em;
+  font-size: 0.7rem;
+  background-color: #f9f9f9;
+  margin: 4px 0;
+  cursor: pointer;
+}
+.demo-components label span:before {
+  content: "\2610";
+  font-size: 1rem;
+  margin-right: 1em;
+  padding-left: 0.25em;
+  opacity: 0.15;
+  font-weight: bold;
+  font-size: 1.75em;
+}
+.demo-components label input:checked ~ span:before {
+  content: "\2611";
+  color: green;
+  opacity: 1;
+}
+.demo-components label input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.ol-popup-layer {
+  min-width: 275px;
+  border-width: 0;
+  box-shadow: 2px 2px 4px #999;
+  border-radius: 10px;
+}
+
+.ol-popup-layer header {
+  background-color: #39c;
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.ol-popup-layer .content {
+  padding: 1.5rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+}
