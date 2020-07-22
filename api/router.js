@@ -26,7 +26,7 @@ module.exports = app => {
         'x-sent': true,
 	    }
 	  }
-	  res.sendFile('./data/stack_raw.tif', options, function (err) {
+	  res.sendFile('./data/stack_raw_3857.tif', options, function (err) {
 	    if (err) {
 	      next(err);
 	    } 

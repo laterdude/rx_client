@@ -10342,6 +10342,13 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
+threads-plugin@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/threads-plugin/-/threads-plugin-1.3.2.tgz#744778621180842265a50c19b1f1843e68392701"
+  integrity sha512-62UGIGmDA9Vqx0vHhedmtcBIw7N/ByNvLUnU512i9l/Jzfx6XWR7XmbygWX82t7cbXDVr8PY4AHw6x0M3l3YSg==
+  dependencies:
+    loader-utils "^1.1.0"
+
 threads@^1.3.1, threads@^1.4.0:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/threads/-/threads-1.6.3.tgz#89324a93509403c90a169344023151ae1fe4986b"

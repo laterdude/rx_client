@@ -18,12 +18,12 @@ const GeoTIFF = require('geotiff')
 const plotty = require('plotty')
 
 export default function MapView({
-  projection = 'EPSG:3857',
+  projection = "EPSG:3857",
   center = [-95.79, 34.48],
   zoom = 4,
   minZoom = 0,
   maxZoom = 28,
-  cssClass = 'olmap',
+  cssClass = "olmap",
   ...props
 }) {
 	const context = useContext(MapContext)

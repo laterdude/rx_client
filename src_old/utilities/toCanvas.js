@@ -12,7 +12,7 @@ function toImageData(georaster, canvasWidth, canvasHeight) {
         const rasterRowIndex = Math.round(rowIndex * yRatio);
         const rasterColumnIndex = Math.round(columnIndex * xRatio);
         const pixelValues = values.map(band => {
-          try { 
+          try {
             return band[rasterRowIndex][rasterColumnIndex];
           } catch (error) {
             console.error(error);
