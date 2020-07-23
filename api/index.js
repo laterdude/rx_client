@@ -1,6 +1,7 @@
 // Main starting point of the application
 const express = require('express');
 const http = require('http');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
@@ -9,9 +10,10 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const geoblaze = require('geoblaze')
 
-const raster = geoblaze.load('https://www.ercserver.us/geoTiff')
-	.then(raster => geoblaze.rasterCalculator(raster, (rh, temp, wind) => ((rh < temp) ? 1 : 0)))
-	.then(x => console.log(x));
+// const raster = geoblaze.load('https://www.ercserver.us/geoTiff')
+// 	.then(raster => geoblaze.rasterCalculator(raster, (rh, temp, wind) => ((rh < temp) ? 1 : 0)))
+// 	.then(x => console.log(x));
+
 // const rasterMaff = await geoblaze
 // 	.rasterCalculator(raster, (rh, temp, wind) => ((rh < temp) ? 1 : 0))
 // console.log('rasterMaff: ', rasterMaff)
@@ -23,6 +25,7 @@ const raster = geoblaze.load('https://www.ercserver.us/geoTiff')
 // App Setup
 app.use(morgan('combined'));
 app.use(cors());
+app.use(compression())
 app.use(bodyParser.json({ type: '*/*' }));
 router(app);
 
